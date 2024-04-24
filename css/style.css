@@ -306,9 +306,15 @@ section {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 515px) {
     .welcome-section {
         height: unset;
+    }
+
+    .welcome {
+        margin: 30px;
+        text-align: center;
+        font-size: 1.2rem;
     }
 
     .motivational {
