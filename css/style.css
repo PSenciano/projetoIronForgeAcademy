@@ -5,6 +5,7 @@
     --base-green: #36c94e;
     --dark-green: #29993c;
     --darker-green: #1b6628;
+    --dark-gray: #0f0f0f;
 }
 
 * {
@@ -24,7 +25,7 @@ body, html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #0f0f0f;
+    background: var(--dark-gray);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -34,8 +35,6 @@ body, html {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--darker-green);
 }
-
-
 
 section {
     height: 100vh;
@@ -60,6 +59,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0px 5px 15px var(--dark-gray);
 }
 
 .welcome {
@@ -126,6 +126,7 @@ section {
     background-image: url('../assets/img/routine.png');
     display: grid;
     grid-template-columns: 1fr 1fr;
+    box-shadow: 0px -5px 15px var(--dark-gray);
 }
 
 .first-routine {
@@ -166,9 +167,10 @@ section {
 /* REVIEWS */
 
 .reviews {
-    background-color: #0f0f0f;
+    background-color: var(--dark-gray);
     display: flex;
     gap: 15px;
+    box-shadow: 0px 5px 15px var(--dark-gray);
 }
 
 .reviews div {
