@@ -3,6 +3,8 @@
 
 :root {
     --base-green: #36c94e;
+    --dark-green: #29993c;
+    --darker-green: #1b6628;
 }
 
 * {
@@ -16,6 +18,24 @@ body, html {
     color: #fff;
     font-family: "Roboto", sans-serif;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--darker-green);
+}
+
+
 
 section {
     height: 100vh;
@@ -77,13 +97,25 @@ section {
     font-family: "Bebas Neue", sans-serif;
 }
 
-.plans-options a {
+.planos p {
+    margin: 0 80px;
+}
+
+.plans-options button {
     background-color: #000;
+    border: none;
     color: #fff;
-    padding: 25px;
+    height: 75px;
+    width: 175px;
     text-decoration: none;
     font-family: "Bebas Neue", sans-serif;
     font-size: 1.3rem;
+}
+
+.plans-options button:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
 }
 
 /* /PLANOS */
@@ -91,11 +123,212 @@ section {
 /* ROUTINE */
 
 .routine {
-    background-image: url("../assets/img/routine.png");
+    background-image: url('../assets/img/routine.png');
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.first-routine {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: space-between;
+}
+
+.first-routine h2 {
+    font-size: 10rem;
+    width: 600px;
+    line-height: 8rem;
+    color: var(--base-green);
+    font-family: "Bebas Neue", sans-serif;
+    margin: 60px;
+}
+
+.first-routine p {
+    margin: 60px;
+}
+
+.last-routine {
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    margin-right: 60px;
+}
+
+.last-routine h4 {
+    margin-bottom: 40px;
+    color: var(--base-green);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
 }
 
 /* /ROUTINE */
+
+/* REVIEWS */
+
+.reviews {
+    background-color: #0f0f0f;
+    display: flex;
+    gap: 15px;
+}
+
+.reviews div {
+    width: 27%;
+    margin: auto;
+}
+
+.mark {
+    font-size: 10rem;
+    font-family: fantasy, monospace;
+    color: var(--base-green);
+    line-height: 1rem;
+}
+
+.reviews div p {
+    margin: 80px 0;
+}
+
+/* /REVIEWS */
+
+/* CONTACT */
+
+.contact {
+    background-image: url('../assets/img/contact.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 80px;
+}
+
+.contact h2 {
+    font-size: 10rem;
+    width: 900px;
+    line-height: 8rem;
+    color: var(--base-green);
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.contact div hr {
+    height: 5px;
+    background-color: var(--base-green);
+    border: none;
+    width: 150px;
+    margin: 20px 0;
+}
+
+/* /CONTACT */
+
+
+@media (max-width: 1150px) {
+    .motivational {
+        font-size: 9rem;
+        line-height: normal;
+        width: unset;
+        text-align: center;
+    }
+
+    .routine {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-routine h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+        width: unset;
+        text-align: center;
+    }
+
+    .first-routine p {
+        margin: 0 30px 30px 30px;
+        font-size: 1rem;
+    }
+
+    .last-routine {
+        width: unset;
+        text-align: center;
+        margin: 30px;
+    }
+
+    .last-routine div h4 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .last-routine div p {
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+
+    .contact {
+        padding: 0;
+        text-align: center;
+    }
+
+    .contact h2 {
+        width: unset;
+        padding: 0;
+    }
+
+    .contact div hr {
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .motivational {
+        font-size: 5rem;
+        line-height: normal;
+    }
+
+    .reviews {
+        height: unset;
+        flex-direction: column;
+    }
+
+    .mark {
+        font-size: 4rem;
+        line-height: 4rem;
+        margin: 0;
+        padding: 0;
+    }
+    .reviews div {
+        width: unset;
+        text-align: center;
+    }
+
+    .reviews div p {
+        margin: 20px;
+        width: unset;
+    }
+
+    .reviews div h4:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .welcome-section {
+        height: unset;
+    }
+
+    .motivational {
+        font-size: 4rem;
+    }
+
+    .planos {
+        height: unset;
+    }
+
+    .plans-options button {
+        margin: 10px;
+    }
+
+    .routine {
+        height: unset;
+    }
+
+    .contact h2 {
+        font-size: 4.2rem;
+        line-height: normal;
+    }
+}
