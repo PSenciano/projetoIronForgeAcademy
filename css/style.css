@@ -18,6 +18,7 @@ body, html {
     font-size: 1.2rem;
     color: #fff;
     font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -321,6 +322,11 @@ section {
 
     .motivational {
         font-size: 4rem;
+    }
+
+    .planos p {
+        margin: 0 20px;
+        text-align: justify;
     }
 
     .planos {
